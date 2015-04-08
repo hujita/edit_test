@@ -1,0 +1,12 @@
+<html>
+<head>
+</head>
+<body>
+<h1>掲示板</h1>
+<p>投稿を受け付けました。</p>
+<p>名前：<strong><%= @sent_message[:name] %></strong></p>
+<p>メッセージ：<strong><%= @sent_message[:text] %></strong></p>
+<p>投稿時刻：<strong><%= @current_time %></strong></p>
+<p><%= link_to "戻る", :action => "show" %></p>
+</body>
+</html>

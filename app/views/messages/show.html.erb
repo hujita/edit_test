@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Guestbook</title>
+</head>
+<body>
+
+<%= link_to "test", :action => "test", :controller => "messages" %>
+
+<h1>掲示板</h1>
+<h2>投稿する</h2>
+
+<%= form_for :sent_message, :url => {:action => "post"} do |f| %>
+
+<p>名前：<%= f.text_field :name, :size => 15 %></p>
+<p>メッセージ<%= f.text_field :text, :size => 50 %></p>
+<p><%= f.submit "投稿する" %></p>
+<% end %>
+
+<h2>メッセージ一覧</h2>
+<dl>
+<% @messages.each do |entry| %>
+  <dt><strong><%=  entry.name %></strong>[ID=<%= entry.id %>] (<%=  entry.time %>)</dt>
+  <dd><%=  entry.text %></dd>
+<p><%= link_to "削除", :action => "destroy", id: entry.id %></p>
+
+<% end %>
+</dl>
+</body>
+</html>
+
+<%#####   memo   #####%>
+
+<%# <p>new_ID：<%= @messages_new_id ></p>    %>
+<%# <p>ID：<%= f.text_field :id, :size => 5 ></p> %>
+  <%#= link_to "削除", destroy_path, method: :delete %>
+<%#   <p><%= link_to "→1page", :action => "show" ></p>   %>
+<%#   <p><%= link_to "→2page", :action => "show_2" ></p>   %>
