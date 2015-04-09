@@ -7,6 +7,7 @@ class MessagesController < ApplicationController
 
   def test
     @aaa = "test"
+    @bbb = "flowtest"
   end
 
   def show
