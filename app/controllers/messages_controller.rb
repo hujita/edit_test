@@ -8,6 +8,8 @@ class MessagesController < ApplicationController
   def test
     @aaa = "test"
 
+
+
   end
 
   def show
