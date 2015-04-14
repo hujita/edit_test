@@ -7,10 +7,6 @@ git flowのテスト
 ツタヤ「おみせやさん」プロジェクトソースファイル
 
 # 開発環境
-Ruby 2.2.1
-Rails 4.2.1
-
-# 開発環境
 
 * Ruby 2.2.1
 * Rails 4.2.1
@@ -23,12 +19,10 @@ Rails 4.2.1
 
 # 管理画面へのアクセス方法
 管理画面にログインするためのアカウント名とパスワードは config/settings.yml に書いてある文字列を分解したものになります。
-(例)
 ```
-dev-toadmin/A7sGvOtc1l@development:admin
+(例)  dev-toadmin/A7sGvOtc1l@development:admin
 ```
-
-アカウント名→dev-toadmin
-パスワード→A7sGvOtc1l
-環境→development(開発)
-権限→admin
+アカウント名→dev-toadmin  
+パスワード→A7sGvOtc1l  
+環境→development(開発)  
+権限→admin  
