@@ -31,10 +31,13 @@ rails serverが実行できますが、production: でアプリを起動する�
 今回は解決策②を採用しました。なのでとくに何もしなくても、戦獄スレイヤーのときと同じように、cloneしてきたsrcでrails serverが実行可能です。
 
 # 定数の管理方法
-戦国スレイヤーではプロジェクト全体で利用できる設定を記述するYAMLファイルを１つのYAMLファイルにまとめて書きましたが、おみせやさんでは環境ごとに分けて基礎となるものをオーバーライドする上書き方式で作成することになりました。それを実現するために、戦獄スレイヤーのときはSettingslogicによって定数を管理していましたが、おみせやさんでは、Settingslogicの代わりにRailsConfigを使用しています。基本的な使い方はSettingslogicと同じです。
+戦国スレイヤーではプロジェクト全体で利用できる設定を記述するYAMLファイルを１つのYAMLファイルにまとめて書きましたが、おみせやさんでは環境ごとに分けて基礎となるものをオーバーライドする上書き方式で作成することになりました。  
+それを実現するために、戦獄スレイヤーのときはSettingslogicによって定数を管理していましたが、おみせやさんでは、Settingslogicの代わりにRailsConfigを使用しています。基本的な使い方はSettingslogicと同じです。
 RailsConfigについては下記URL先が良い参考になると思います。  
+
 RailsConfigについて：  
 <http://blog.10rane.com/2015/04/08/manage-constant-in-rails_config/>  
 Settingslogicと比較：  
 <http://blog.44uk.net/2012/09/09/rails-gem-for-static-variables/>  
+
 ※ 上記URL先で、gemをインストールしたあとに rails g rails_config:install というインストールコマンドを実行するようにと書かれていますが、既にしてあるのでしなくて大丈夫です。もし「gitignoreで消されてしまったconfig/settings.local.ymlがローカルのほうにも欲しい」等の理由でこのインストールコマンドを実行する場合は、実行時に「今作ろうとしているファイルがすでに存在しますが上書きしますか？」のようなことを聞かれると思うので、「n」を打ち込んで拒否すると、既存のファイルには上書きせずに、足りないファイルだけを新しく生成してくれます。
